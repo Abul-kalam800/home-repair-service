@@ -1,7 +1,10 @@
+import { use } from "react";
 import { Link } from "react-router";
+import { AuthContex } from "../Contex/AuthContex";
 
 
 const Header = () => {
+ 
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -13,14 +16,14 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-            >
+             >
           
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
@@ -57,9 +60,9 @@ const Header = () => {
             <Link to='/services'>Services</Link>
           </li>
           <li>
-            <details>
-              <summary>Dashboard</summary>
-              <ul className="p-2 w-[150px]">
+           <details className="dropdown">
+             <summary>Dashboard</summary> 
+              <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
                 <li>
                  <Link>Add services</Link>
                 </li>
@@ -72,14 +75,14 @@ const Header = () => {
                 <li>
                  <Link>Service-To-Do</Link>
                 </li>
-            
               </ul>
             </details>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn">Log-in</Link>
+        <Link to="/login" className="btn">Login</Link>
+        <Link to="/registration" className="btn">Registration</Link>
       </div>
     </div>
   );

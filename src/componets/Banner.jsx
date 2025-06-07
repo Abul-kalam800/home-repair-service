@@ -27,7 +27,7 @@ const Banner = () => {
      <div  className="hero  h-[550px]"
       style={{
         backgroundImage:
-          "url(https://i.postimg.cc/5yDWJmK3/15667.jpg)",
+          "url(https://i.postimg.cc/5yDWJmK3/15667.jpg)"
       }}
     >
       <div className="hero-overlay"></div>
@@ -48,7 +48,7 @@ const Banner = () => {
      <div className="hero  h-[550px]"
       style={{
         backgroundImage:
-          "url(https://i.postimg.cc/VksKKtkZ/93673.jpg)",
+          "url(https://i.postimg.cc/VksKKtkZ/93673.jpg)"
       }}
     >
       <div className="hero-overlay"></div>
@@ -68,7 +68,7 @@ const Banner = () => {
       <div className="hero h-[550px]"
       style={{
         backgroundImage:
-          "url(https://i.postimg.cc/Cx6sJ6td/young-cute-family-repairs-room.jpg)",
+          "url(https://i.postimg.cc/Cx6sJ6td/young-cute-family-repairs-room.jpg)"
       }}
     >
       <div className="hero-overlay"></div>
