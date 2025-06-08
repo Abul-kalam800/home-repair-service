@@ -115,7 +115,7 @@ const Header = () => {
             <button className="btn" onClick={handleLogout}>
               Logout
             </button>
-            <div className="w-[40px] h-[40px] ">
+            <div className="w-[40px] h-[40px]">
               <img className="rounded-full" src={user.photoURL} alt="photo" />
             </div>
           </>

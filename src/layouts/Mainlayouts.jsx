@@ -10,7 +10,7 @@ const Mainlayouts = () => {
       <Header></Header>
       <Outlet></Outlet>
       <main className="w-11/12 mx-auto">
-        <PopularService></PopularService>
+       
       </main>
       <Footer></Footer>
     </div>
