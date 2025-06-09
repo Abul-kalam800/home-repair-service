@@ -14,6 +14,7 @@ const ServiceCard = ({ service }) => {
   } = service;
   return (
     <div className="flex flex-col space-y-3 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-5">
+      
       <div className=" ">
         <img
           src={serviceImage}
@@ -46,13 +47,13 @@ const ServiceCard = ({ service }) => {
         </div>
         <h2 className="my-5 text-xl font-semibold">{serviceName}</h2>
         <p className="text-sm dark:text-gray-600 pb-1">
-          {longDescription.slice(0, 100)}...
-          <Link to={`services/${_id}`}
-            className="btn btn-primary px-10 md:ml-4 mt-5 hover:btn-secondary"
+          {longDescription.slice(0, 100)}... 
+        </p>
+         <Link to={`services/${_id}`}
+            className="btn btn-primary px-10  mt-5 hover:btn-secondary"
           >
             View Details
           </Link>
-        </p>
       </div>
     </div>
   );
