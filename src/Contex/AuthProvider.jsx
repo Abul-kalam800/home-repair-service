@@ -43,6 +43,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     googleSign,
     uptoProfile,
+    loading,
+    setLoading,
   };
   useEffect(() => {
     const subcrib = onAuthStateChanged(auth, (currentUser) => {

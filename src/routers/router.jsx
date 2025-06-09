@@ -7,6 +7,8 @@ import Registration from "../pages/Registration";
 import Allservices from "../pages/Allservices";
 import Addservices from "../pages/Addservices";
 import ServicesDetails from "../pages/ServicesDetails";
+import Loading from "../componets/Loading";
+import PrivetRouter from "../privetRouts/PrivetRouter";
 
 export const routers = createBrowserRouter([
   {
@@ -20,23 +22,29 @@ export const routers = createBrowserRouter([
         Component: Home,
       },
       {
-        path:'/allservices',
-        loader: ()=>fetch('http://localhost:4000/allservices'),
-        Component:Allservices
-
+        path: "/allservices",
+        hydrateFallbackElement: <Loading></Loading>,
+        loader: () => fetch("http://localhost:4000/allservices"),
+        Component: Allservices,
       },
       {
-        path:'/allservices/services/:id',
-        loader: ({params})=> fetch(`http://localhost:4000/allservices/services/${params.id}`),
-        Component:ServicesDetails
+        path: "/allservices/:id",
+        hydrateFallbackElement: <Loading></Loading>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:4000/allservices/${params.id}`),
+          Component:ServicesDetails
       },
       {
-        path:'/addservices',
-        Component:Addservices
+        path: "/addservices",
+        element: (
+          <PrivetRouter>
+            <Addservices></Addservices>
+          </PrivetRouter>
+        ),
       },
       {
-        path:'/services/:id',
-        Component:ServicesDetails
+        path: "/services/:id",
+        Component: ServicesDetails,
       },
       {
         path: "/login",

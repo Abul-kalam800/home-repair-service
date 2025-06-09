@@ -49,7 +49,7 @@ const ServiceCard = ({ service }) => {
         <p className="text-sm dark:text-gray-600 pb-1">
           {longDescription.slice(0, 100)}... 
         </p>
-         <Link to={`services/${_id}`}
+         <Link to={`/allservices/${_id}`}
             className="btn btn-primary px-10  mt-5 hover:btn-secondary"
           >
             View Details
