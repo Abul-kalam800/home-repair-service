@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router";
 
-const PopularServicesCard = ({ service }) => {
- 
-  const { providerImage, providerName, serviceImage, serviceName, price,longDescription,_id } =
-    service;
-
+const ServiceCard = ({ service }) => {
+  const {
+    providerImage,
+    providerName,
+    serviceImage,
+    serviceName,
+    price,
+    longDescription,
+    _id,
+    servicesLocation,
+  } = service;
   return (
-    <div className="flex flex-col space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-10">
-      <img
-        src={serviceImage}
-        alt=""
-        className="object-cover w-full mb-4 h-30 sm:h-96 dark:bg-gray-500"
-      />
+    <div className="flex flex-col space-y-3 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-5">
+      <div className=" ">
+        <img
+          src={serviceImage}
+          alt=""
+          className="object-cover w-full mb-4 h-40 sm:h-96 dark:bg-gray-500"
+        />
+      </div>
       <div className="p-6">
         <div className="flex justify-between space-x-4">
           <div className="flex justify-center items-center gap-3">
@@ -29,6 +37,7 @@ const PopularServicesCard = ({ service }) => {
               >
                 {providerName}
               </a>
+              <p>{servicesLocation}</p>
             </div>
           </div>
           <div>
@@ -36,12 +45,17 @@ const PopularServicesCard = ({ service }) => {
           </div>
         </div>
         <h2 className="my-5 text-xl font-semibold">{serviceName}</h2>
-        <p className="text-sm dark:text-gray-600 pb-1">{longDescription.slice(0,100)}...
-            <Link to={`services/${_id}`} className="btn btn-primary ml-1 mt-5">View Details</Link>
+        <p className="text-sm dark:text-gray-600 pb-1">
+          {longDescription.slice(0, 100)}...
+          <Link to={`services/${_id}`}
+            className="btn btn-primary px-10 md:ml-4 mt-5 hover:btn-secondary"
+          >
+            View Details
+          </Link>
         </p>
       </div>
     </div>
   );
 };
 
-export default PopularServicesCard;
+export default ServiceCard;

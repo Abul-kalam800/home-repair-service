@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Registration from "../pages/Registration";
 import Allservices from "../pages/Allservices";
 import Addservices from "../pages/Addservices";
+import ServicesDetails from "../pages/ServicesDetails";
 
 export const routers = createBrowserRouter([
   {
@@ -20,12 +21,21 @@ export const routers = createBrowserRouter([
       },
       {
         path:'/allservices',
+        loader: ()=>fetch('http://localhost:4000/allservices'),
         Component:Allservices
 
       },
       {
+        path:'/allservices/services/:id',
+        Component:ServicesDetails
+      },
+      {
         path:'/addservices',
         Component:Addservices
+      },
+      {
+        path:'/services/:id',
+        Component:ServicesDetails
       },
       {
         path: "/login",
