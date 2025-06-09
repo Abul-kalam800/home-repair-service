@@ -1,5 +1,6 @@
  import React, { use } from 'react';
 import PopularServicesCard from './PopularServicesCard';
+import { Link } from 'react-router';
 
 
  
@@ -10,12 +11,15 @@ import PopularServicesCard from './PopularServicesCard';
     return (
         <div>
             <h2 className='text-4xl font-semibold text-center mt-20'>Popular service</h2>
-            <div className='my-20 grid grid-cols-1 lg:grid-cols-2 gap-5
+            <div className='my-14 grid grid-cols-1 lg:grid-cols-2 gap-5
             '>
               {
                 services.map(service=> <PopularServicesCard key={service._id} service={service}></PopularServicesCard>)
               }
             </div>
+            <div className='w-11/12 flex justify-center mx-auto mb-10'>
+            <Link to='/allservices'><button className='btn btn-primary '>Show All</button>
+            </Link></div>
         </div>
     );
  };

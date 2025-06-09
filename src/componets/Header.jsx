@@ -21,7 +21,7 @@ const Header = () => {
       });
   };
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -83,7 +83,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/allservices">Services</Link>
           </li>
           {user && (
             <li>
@@ -91,7 +91,7 @@ const Header = () => {
                 <summary>Dashboard</summary>
                 <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
                   <li>
-                    <Link>Add services</Link>
+                    <Link to='/addservices'>Add services</Link>
                   </li>
                   <li>
                     <Link>Manage service</Link>

@@ -11,14 +11,14 @@ const PopularServicesCard = ({ service }) => {
       <img
         src={serviceImage}
         alt=""
-        className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
+        className="object-cover w-full mb-4 h-30 sm:h-96 dark:bg-gray-500"
       />
       <div className="p-6">
         <div className="flex justify-between space-x-4">
           <div className="flex justify-center items-center gap-3">
             <img
-              alt=""
               src={providerImage}
+              alt="service-img"
               className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500"
             />
             <div className="">
