@@ -94,7 +94,7 @@ const Header = () => {
                     <Link to='/addservices'>Add services</Link>
                   </li>
                   <li>
-                    <Link>Manage service</Link>
+                    <Link to='/manageservice'>Manage service</Link>
                   </li>
                   <li>
                     <Link>Booked service</Link>

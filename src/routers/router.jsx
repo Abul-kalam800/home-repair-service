@@ -9,6 +9,7 @@ import Addservices from "../pages/Addservices";
 import ServicesDetails from "../pages/ServicesDetails";
 import Loading from "../componets/Loading";
 import PrivetRouter from "../privetRouts/PrivetRouter";
+import ManageService from "../pages/ManageService";
 
 export const routers = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const routers = createBrowserRouter([
             <Addservices></Addservices>
           </PrivetRouter>
         ),
+      },
+      {
+        path:'/manageservice',
+        element:<PrivetRouter><ManageService></ManageService></PrivetRouter>
       },
       {
         path: "/services/:id",

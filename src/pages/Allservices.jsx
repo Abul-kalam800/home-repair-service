@@ -7,7 +7,7 @@ const Allservices = () => {
     console.log(allServices)
     return (
         <div className='w-11/12 mx-auto'>
-            <h2 className='text-5xl font-semibold text-center my-20'>All Services </h2>
+            <h2 className='text-5xl font-semibold text-center my-20'>Our  All Services Avaiable </h2>
            <div className=''>
              {
                 allServices.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
