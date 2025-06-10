@@ -10,6 +10,7 @@ import ServicesDetails from "../pages/ServicesDetails";
 import Loading from "../componets/Loading";
 import PrivetRouter from "../privetRouts/PrivetRouter";
 import ManageService from "../pages/ManageService";
+import Update from "../componets/Update";
 
 export const routers = createBrowserRouter([
   {
@@ -54,6 +55,11 @@ export const routers = createBrowserRouter([
       {
         path: "/services/:id",
         Component: ServicesDetails,
+      },
+      {
+        path:'/update/:id',
+       element:<PrivetRouter><Update></Update></PrivetRouter>,
+        loader:({params})=> fetch(`http://localhost:3000/allservices/${params.id}`)
       },
       {
         path: "/login",

@@ -166,7 +166,7 @@ const ServicesDetails = () => {
               />
 
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn mt-7 bg-red-500">Close</button>
+              <button className="btn mt-7 bg-red-500" >Close</button>
             </form>
           </div>
         </div>

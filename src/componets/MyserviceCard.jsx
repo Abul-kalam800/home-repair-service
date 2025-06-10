@@ -1,6 +1,9 @@
-import React from "react";
+import React, { use } from "react";
+import { AuthContex } from "../Contex/AuthContex";
+import { Link } from "react-router";
 
 const MyserviceCard = ({ service }) => {
+  const { user } = use(AuthContex);
   const {
     providerImage,
     providerName,
@@ -11,6 +14,12 @@ const MyserviceCard = ({ service }) => {
     _id,
     servicesLocation,
   } = service;
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    console.log(form);
+  };
   return (
     <div className="pb-5 ">
       <div className=" ">
@@ -18,20 +27,24 @@ const MyserviceCard = ({ service }) => {
       </div>
       <p className="text-4xl font-semibold  my-7">{serviceName}</p>
       <img src={providerImage} alt="photo" className="w-12 h-12 rounded-full" />
-      <p>
-        <span className="font-semibold">Name : </span>
+      <p className="mt-5">
+        <span className="font-semibold text-lg">Name : </span>
         {providerName}
       </p>
-      <p>
-        <span className="font-semibold">Service Location:</span> {servicesLocation}
+      <p className="mt-2">
+        <span className="font-semibold text-lg">Service Location : </span>{" "}
+        {servicesLocation}
       </p>
-      <p>
-        <span className="font-semibold">Price :</span> {price}
+      <p className="mt-2">
+        <span className="font-semibold text-lg">Price : </span> {price}
       </p>
-      <div className="flex gap-5 justify-end">
-        <button className="btn btn-primary">Edit</button>
-        <button className="btn btn-primary">Delet</button>
+
+      {/* Edit button  */}
+      <div className="flex justify-end gap-6">
+       <Link to ={`/update/${_id}`}> <button className="btn btn-primary">Edit</button></Link>
+      <button className="btn btn-primary">Delet</button>
       </div>
+
     </div>
   );
 };
