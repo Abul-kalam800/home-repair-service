@@ -1,9 +1,10 @@
 import React, { use } from "react";
 import { AuthContex } from "../Contex/AuthContex";
 import { Link } from "react-router";
+import axios from "axios";
+import Swal from "sweetalert2";
 
-const MyserviceCard = ({ service }) => {
-  const { user } = use(AuthContex);
+const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
   const {
     providerImage,
     providerName,
@@ -15,10 +16,40 @@ const MyserviceCard = ({ service }) => {
     servicesLocation,
   } = service;
 
-  const handleUpdate = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    console.log(form);
+  const handleDelet = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/allservices/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount) {
+              const remaingService = servicesCard.filter(
+                (serviceItem) => serviceItem._id != id
+              );
+              setServicesCard(remaingService);
+            }
+
+            console.log(data);
+          });
+
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your Services has been deleted.",
+          icon: "success",
+        });
+      }
+    });
   };
   return (
     <div className="pb-5 ">
@@ -41,10 +72,14 @@ const MyserviceCard = ({ service }) => {
 
       {/* Edit button  */}
       <div className="flex justify-end gap-6">
-       <Link to ={`/update/${_id}`}> <button className="btn btn-primary">Edit</button></Link>
-      <button className="btn btn-primary">Delet</button>
+        <Link to={`/update/${_id}`}>
+          {" "}
+          <button className="btn btn-primary">Edit</button>
+        </Link>
+        <button onClick={handleDelet} className="btn btn-primary">
+          Delet
+        </button>
       </div>
-
     </div>
   );
 };

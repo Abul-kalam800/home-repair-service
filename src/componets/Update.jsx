@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import { AuthContex } from "../Contex/AuthContex";
 import { useLoaderData } from "react-router";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Update = () => {
   const data = useLoaderData();
   const { user } = useContext(AuthContex);
- 
+
   const {
     providerImage,
     providerName,
@@ -21,17 +22,26 @@ const Update = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
-    const formData = new FormData(form)
-    const UpdateData = Object.fromEntries(formData.entries())
+    const formData = new FormData(form);
+    const UpdateData = Object.fromEntries(formData.entries());
     console.log(UpdateData);
 
-    axios.put(`http://localhost:3000/allservices/${_id}`,UpdateData)
-    .then(res=>{
-        console.log(res.data)
-    })
-    .catch(error=>{
-        console.log(error)
-    })
+    axios
+      .put(`http://localhost:3000/allservices/${_id}`, UpdateData)
+      .then((res) => {
+        if (res.data.modifiedCount) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your Update has been successfull",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className=" w-11/12  mx-auto">
@@ -82,7 +92,7 @@ const Update = () => {
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Price </legend>
               <input
-              name="price"
+                name="price"
                 type="text"
                 className="input w-full"
                 defaultValue={price}
