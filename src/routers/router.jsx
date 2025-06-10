@@ -24,15 +24,19 @@ export const routers = createBrowserRouter([
       {
         path: "/allservices",
         hydrateFallbackElement: <Loading></Loading>,
-        loader: () => fetch("http://localhost:4000/allservices"),
         Component: Allservices,
+        loader: () => fetch("http://localhost:3000/allservices"),
       },
       {
         path: "/allservices/:id",
         hydrateFallbackElement: <Loading></Loading>,
+        element: (
+          <PrivetRouter>
+            <ServicesDetails></ServicesDetails>
+          </PrivetRouter>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/allservices/${params.id}`),
-          Component:ServicesDetails
+          fetch(`http://localhost:3000/allservices/${params.id}`),
       },
       {
         path: "/addservices",

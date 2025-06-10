@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Link, useLoaderData, useParams } from "react-router";
+import { useLoaderData } from "react-router";
 import { AuthContex } from "../Contex/AuthContex";
 
 const ServicesDetails = () => {
@@ -58,6 +58,7 @@ const ServicesDetails = () => {
       </button>
 
       {/* modal  */}
+      
       <dialog id="my_modal_5" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
           <div className=" ">
@@ -103,7 +104,7 @@ const ServicesDetails = () => {
                     Service Provider Email
                   </legend>
                   <input
-                    name="providerImage"
+                    name="providerEmail"
                     type="text"
                     className="input w-full"
                     readOnly

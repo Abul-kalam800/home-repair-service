@@ -37,7 +37,7 @@ const PopularServicesCard = ({ service }) => {
         </div>
         <h2 className="my-5 text-xl font-semibold">{serviceName}</h2>
         <p className="text-sm dark:text-gray-600 pb-1">{longDescription.slice(0,100)}...
-            <Link to={`services/${_id}`} className="btn btn-primary ml-1 mt-5">View Details</Link>
+            <Link to={`allservices/${_id}`} className="btn btn-primary ml-1 mt-5">View Details</Link>
         </p>
       </div>
     </div>

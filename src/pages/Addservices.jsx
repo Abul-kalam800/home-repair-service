@@ -1,5 +1,7 @@
 import React, { use } from "react";
 import { AuthContex } from "../Contex/AuthContex";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Addservices = () => {
   const { user } = use(AuthContex);
@@ -8,7 +10,24 @@ const Addservices = () => {
     const form = e.target;
     const formData = new FormData(form);
     const allFormData = Object.fromEntries(formData.entries());
-    console.log(allFormData);
+    const newService = allFormData;
+    console.log(newService);
+    axios
+      .post("http://localhost:3000/allservices", newService)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your are successfully added services",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -38,12 +57,17 @@ const Addservices = () => {
           </fieldset>
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Price </legend>
-            <input type="text" className="input w-full" placeholder="Price" />
+            <input
+              type="text"
+              name="price"
+              className="input w-full"
+              placeholder="Price"
+            />
           </fieldset>
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Service Area</legend>
             <input
-              name="serviceArea"
+              name="servicesLocation"
               type="text"
               className="input w-full"
               placeholder="Service Area"
@@ -66,7 +90,7 @@ const Addservices = () => {
               type="text"
               className="input w-full"
               defaultValue={user.photoURL}
-              readOnly 
+              readOnly
             />
           </fieldset>
           <fieldset className="fieldset">

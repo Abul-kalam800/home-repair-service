@@ -1,9 +1,9 @@
-import React, { use } from 'react';
+import React, { Children, use } from 'react';
 import { AuthContex } from '../Contex/AuthContex';
 import { Navigate, useLocation } from 'react-router';
 import Loading from '../componets/Loading';
 
-const PrivetRouter = ({childern}) => {
+const PrivetRouter = ({children}) => {
     const location = useLocation()
     const {user,loading}=use(AuthContex)
     if(loading){
@@ -14,7 +14,7 @@ const PrivetRouter = ({childern}) => {
     }
     return (
       <div>
-         {childern}
+         {children}
       </div>
     );
 };
