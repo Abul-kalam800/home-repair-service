@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { AuthContex } from "../Contex/AuthContex";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Addservices = () => {
   const { user } = use(AuthContex);
@@ -31,7 +32,12 @@ const Addservices = () => {
   };
 
   return (
+   
+     
     <div className="w-11/12 mx-auto">
+     <Helmet>
+        <title>Add-services </title>
+      </Helmet>
       <h2 className="text-5xl font-semibold text-center mt-10">Add Services</h2>
       <form onSubmit={handleAddservice} className="p-5 md:p-30">
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 ">
