@@ -1,11 +1,13 @@
 import React, { use } from "react";
 import { useLoaderData } from "react-router";
 import { AuthContex } from "../Contex/AuthContex";
+import axios from "axios";
+import Swal from "sweetalert2";
+import "../index.css";
 
 const ServicesDetails = () => {
   const { user } = use(AuthContex);
   const singleService = useLoaderData();
-  console.log(singleService);
   const {
     providerImage,
     providerName,
@@ -14,8 +16,35 @@ const ServicesDetails = () => {
     price,
     longDescription,
     _id,
+    providrEmail,
     servicesLocation,
   } = singleService;
+
+  const handlePurchase = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const allFormData = Object.fromEntries(formData.entries());
+    console.log(allFormData);
+    axios
+      .post("http://localhost:3000/booking", allFormData)
+      .then((res) => {
+        document.getElementById('my_modal_5').close();
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Your are successfully purchase",
+            showConfirmButton: false,
+             timer: 1500,
+          });
+        }
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="w-11/12 mx-auto my-10">
       <h3 className="text-2xl font-semibold mb-7">
@@ -58,12 +87,12 @@ const ServicesDetails = () => {
       </button>
 
       {/* modal  */}
-      
-      <dialog id="my_modal_5" className="modal">
+
+      <dialog id="my_modal_5" className="modal z-9999 ">
         <div className="modal-box w-11/12 max-w-5xl">
           <div className=" ">
-            <form method="dialog">
-              <div className=" grid md:grid-cols-2 gap-5 ">
+            <form onSubmit={handlePurchase}>
+              <div className=" grid md:grid-cols-2 gap-2 ">
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend">
                     Image URL of the Service
@@ -73,6 +102,16 @@ const ServicesDetails = () => {
                     type="text"
                     className="input w-full"
                     defaultValue={serviceImage}
+                    readOnly
+                  />
+                </fieldset>
+                <fieldset className="fieldset">
+                  <legend className="fieldset-legend">ServiceId</legend>
+                  <input
+                    name="service_id"
+                    type="text"
+                    className="input w-full"
+                    defaultValue={_id}
                     readOnly
                   />
                 </fieldset>
@@ -92,7 +131,7 @@ const ServicesDetails = () => {
                     Service Provider Name
                   </legend>
                   <input
-                    name="longDescription"
+                    name="providerName"
                     type="textarea"
                     className="input w-full"
                     defaultValue={providerName}
@@ -107,6 +146,7 @@ const ServicesDetails = () => {
                     name="providerEmail"
                     type="text"
                     className="input w-full"
+                    defaultValue={providrEmail}
                     readOnly
                   />
                 </fieldset>
@@ -115,7 +155,7 @@ const ServicesDetails = () => {
                     Current user Email
                   </legend>
                   <input
-                    name="providrEmail"
+                    name="currenUserEmail"
                     type="text"
                     className="input w-full"
                     defaultValue={user.email}
@@ -125,7 +165,7 @@ const ServicesDetails = () => {
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend">Current User Name</legend>
                   <input
-                    name="providerName"
+                    name="currentUserName"
                     type="text"
                     className="input w-full"
                     defaultValue={user.displayName}
@@ -158,15 +198,30 @@ const ServicesDetails = () => {
                     placeholder="Special Instraction"
                   />
                 </fieldset>
+                <fieldset className="fieldset">
+                  <legend className="fieldset-legend">ServiceStatus</legend>
+                  <input
+                    name="status"
+                    type="text"
+                    className="input w-full"
+                    defaultValue="pending"
+                    readOnly
+                  />
+                </fieldset>
               </div>
-              <input
-                type="submit"
-                className="input w-full mt-7 bg-primary cursor-pointer "
-                value="Purchase"
-              />
 
-              {/* if there is a button in form, it will close the modal */}
-              <button className="btn mt-7 bg-red-500" >Close</button>
+              <div className="flex justify-between mt-5 gap-5">
+                <button type="submit" className=" btn btn-secondary px-5">
+                  PURCHEASE
+                </button>
+                <button
+                  type="button"
+                  className="btn bg-red-700"
+                  onClick={() => document.getElementById("my_modal_5").close()}
+                >
+                  CLOSE
+                </button>
+              </div>
             </form>
           </div>
         </div>
