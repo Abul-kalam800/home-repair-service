@@ -8,7 +8,7 @@ import { servicesCreatedbyPromies } from '../shared/servicePromies';
     return (
         <div>
             <h1 className='text-6xl font-semibold text-center my-10'>Mange service</h1>
-            <Suspense>
+            <Suspense fallback={<span>Loading.............</span>}>
                 <MyservicesList servicesCreatedbyPromies={servicesCreatedbyPromies(user.email)}></MyservicesList>
             </Suspense>
         </div>

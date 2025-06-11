@@ -4,7 +4,7 @@ import ServiceCard from '../componets/ServiceCard';
 
 const Allservices = () => {
     const allServices = useLoaderData()
-    console.log(allServices)
+
     return (
         <div className='w-11/12 mx-auto'>
             <h2 className='text-5xl font-semibold text-center my-20'>Our  All Services Avaiable </h2>

@@ -48,7 +48,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/allservices">Services</Link>
             </li>
             {user && (
               <li>
@@ -56,13 +56,13 @@ const Header = () => {
                   <summary>Dashboard</summary>
                   <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
                     <li>
-                      <Link>Add services</Link>
+                      <Link to='/addservices'>Add services</Link>
                     </li>
                     <li>
-                      <Link>Manage service</Link>
+                      <Link to='/manageservice'>Manage service</Link>
                     </li>
                     <li>
-                      <Link>Booked service</Link>
+                      <Link to='/booking'>Booked service</Link>
                     </li>
                     <li>
                       <Link>Service-To-Do</Link>
@@ -97,7 +97,7 @@ const Header = () => {
                     <Link to='/manageservice'>Manage service</Link>
                   </li>
                   <li>
-                    <Link>Booked service</Link>
+                    <Link to='/booking'>Booked service</Link>
                   </li>
                   <li>
                     <Link>Service-To-Do</Link>

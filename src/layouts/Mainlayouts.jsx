@@ -8,7 +8,9 @@ const Mainlayouts = () => {
   return (
     <div>
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="w-11/12 mx-auto">
+         <Outlet></Outlet>
+      </div>
       <main className="w-11/12 mx-auto">
        
       </main>
