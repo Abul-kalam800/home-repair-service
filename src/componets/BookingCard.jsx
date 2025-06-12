@@ -21,6 +21,8 @@ const BookingCard = ({ booking }) => {
       <p><span className="text-lg font-semibold">Provider-Email: </span>{providerEmail}</p>
       <p><span className="text-lg font-semibold"> Provider-Name: </span>{providerName}</p>
       <p><span className="text-lg font-semibold">Date: </span>{date}</p>
+      <p><span className="text-lg font-semibold">Status: </span>{status}</p>
+
     </div>
   );
 };

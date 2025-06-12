@@ -1,7 +1,5 @@
 import React, { use } from "react";
-import { AuthContex } from "../Contex/AuthContex";
 import { Link } from "react-router";
-import axios from "axios";
 import Swal from "sweetalert2";
 
 const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
@@ -34,8 +32,8 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
-              const remaingService = servicesCard.filter(
-                (serviceItem) => serviceItem._id != id
+              const remaingService = servicesCard?.filter(
+                (serviceItem) => serviceItem?._id != id
               );
               setServicesCard(remaingService);
             }
@@ -73,10 +71,10 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
       {/* Edit button  */}
       <div className="flex justify-end gap-6">
         <Link to={`/update/${_id}`}>
-          {" "}
+         
           <button className="btn btn-primary">Edit</button>
         </Link>
-        <button onClick={handleDelet} className="btn btn-primary">
+        <button onClick={()=>handleDelet(_id)} className="btn btn-primary">
           Delet
         </button>
       </div>

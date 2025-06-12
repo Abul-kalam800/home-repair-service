@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../componets/Banner';
 import { useLoaderData } from 'react-router';
 import PopularService from '../componets/PopularService';
-import { Helmet } from 'react-helmet-async';
+
  
 const servicesPromies = fetch('http://localhost:3000/popular_services')
 .then(res=>res.json())
@@ -11,7 +11,7 @@ const Home = () => {
   
     return (
         <div>
-            <Helmet><title>Home-page</title></Helmet>
+            <title>Home-page</title>
             <Banner></Banner>
             <div className='w-11/12 mx-auto'>
             <PopularService servicesPromies={servicesPromies}></PopularService>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import ServiceCard from '../componets/ServiceCard';
-import { Helmet } from 'react-helmet-async';
+
 
 const Allservices = () => {
     const allServices = useLoaderData()
 
     return (
         <div className='w-11/12 mx-auto'>
-            <Helmet><title>All-services</title></Helmet>
+            <title>All-services</title>
             <h2 className='text-5xl font-semibold text-center my-20'>Our  All Services Avaiable </h2>
            <div className=''>
              {
