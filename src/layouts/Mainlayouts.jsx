@@ -8,10 +8,10 @@ const Mainlayouts = () => {
   return (
     <div>
       <Header></Header>
-      <div className="w-11/12 mx-auto">
+      <div className="max-w-7xl mx-auto">
          <Outlet></Outlet>
       </div>
-      <main className="w-11/12 mx-auto">
+      <main className="max-w-7xl mx-auto">
        
       </main>
       <Footer></Footer>

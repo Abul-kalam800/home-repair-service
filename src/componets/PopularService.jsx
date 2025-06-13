@@ -17,7 +17,7 @@ import { Link } from 'react-router';
                 services.map(service=> <PopularServicesCard key={service._id} service={service}></PopularServicesCard>)
               }
             </div>
-            <div className='w-11/12 flex justify-center mx-auto mb-10'>
+            <div className='max-w-7xl flex justify-center mx-auto mb-10'>
             <Link to='/allservices'><button className='btn btn-primary '>Show All</button>
             </Link></div>
         </div>

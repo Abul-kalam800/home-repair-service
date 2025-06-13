@@ -12,7 +12,7 @@ const BookingCard = ({ booking }) => {
   } = booking;
 
   return (
-    <div className="bg-base-300 p-5 rounded-2xl w-9/12">
+    <div className="bg-base-300 p-5 rounded-2xl">
       <div className=" ">
         <img src={serviceImage} alt="img" className="rounded-2xl" />
       </div>

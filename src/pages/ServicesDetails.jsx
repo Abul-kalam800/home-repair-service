@@ -46,7 +46,7 @@ const ServicesDetails = () => {
       });
   };
   return (
-    <div className="w-11/12 mx-auto my-10">
+    <div className="max-w-7xl mx-auto my-10">
       <h3 className="text-2xl font-semibold mb-7">
         Service Provider Informetaion
       </h3>
@@ -89,7 +89,7 @@ const ServicesDetails = () => {
       {/* modal  */}
 
       <dialog id="my_modal_5" className="modal z-9999 ">
-        <div className="modal-box w-11/12 max-w-5xl">
+        <div className="modal-box max-w-7xlmax-w-5xl">
           <div className=" ">
             <form onSubmit={handlePurchase}>
               <div className=" grid md:grid-cols-2 gap-2 ">

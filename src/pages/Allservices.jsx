@@ -15,10 +15,10 @@ const Allservices = () => {
   console.log(services)
    console.log(search)
     return (
-        <div className='w-11/12 mx-auto'>
+        <div className='max-w-7xl mx-auto'>
             <title>All-services</title>
-            <h2 className='text-2xl md:text-5xl font-semibold md:text-center md:my-10 mt-10'>Our  All Services Avaiable </h2>
-           <div className=''>
+            <h2 className='text-2xl md:text-5xl font-semibold md:text-center md:my-10 mt-10 text-center'>Our  All Services Avaiable </h2>
+           <div className='grid gap-y-7'>
             <input type="text" name="search" id=""  placeholder='Search by name' className='input w-full my-10 p-6 rounded-4xl border-3 '  onChange={(e) => setSearch(e.target.value)}/>
              {
                 services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)

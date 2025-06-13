@@ -33,7 +33,7 @@ const Addservices = () => {
   return (
    
      
-    <div className="w-11/12 mx-auto">
+    <div className="max-w-7xl mx-auto">
 
         <title>Add-services </title>
      

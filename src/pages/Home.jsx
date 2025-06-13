@@ -13,7 +13,7 @@ const Home = () => {
         <div>
             <title>Home-page</title>
             <Banner></Banner>
-            <div className='w-11/12 mx-auto'>
+            <div className='max-w-7xl mx-auto'>
             <PopularService servicesPromies={servicesPromies}></PopularService>
             </div>
 

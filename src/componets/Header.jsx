@@ -22,8 +22,8 @@ const Header = () => {
       });
   };
   return (
-  <div className="bg-primary">
-      <div className="navbar shadow-sm w-11/12 mx-auto">
+  <div className="bg-primary shadow-sm sticky w-full top-0  z-999">
+      <div className="navbar max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -136,7 +136,7 @@ const Header = () => {
         {user ? (
           <>
             
-            <button className="btn" onClick={handleLogout}>
+            <button className="btn btn-secondary" onClick={handleLogout}>
               Logout
             </button>
             <div className="w-[40px] h-[40px]">
@@ -145,10 +145,10 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn">
+            <Link to="/login" className="btn btn-secondary ml-5">
               Login
             </Link>
-            <Link to="/registration" className="btn">
+            <Link to="/registration" className="btn btn-secondary ml-5">
               Registration
             </Link>
           </>

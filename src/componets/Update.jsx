@@ -44,7 +44,7 @@ const Update = () => {
       });
   };
   return (
-    <div className=" w-11/12  mx-auto">
+    <div className=" max-w-7xl mx-auto">
       <h3 className="text-3xl font-semibold my-4 text-center">
         Update Service As You want
       </h3>

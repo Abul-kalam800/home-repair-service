@@ -7,7 +7,7 @@ const MyservicesList = ({ servicesCreatedbyPromies }) => {
 
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl font-semibold my-10">
         My service List: {servicesCard.length}
       </h1>
