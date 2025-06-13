@@ -13,6 +13,7 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
     _id,
     servicesLocation,
   } = service;
+  console.log(_id)
 
   const handleDelet = (id) => {
     console.log(id);

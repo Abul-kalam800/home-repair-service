@@ -12,6 +12,7 @@ import PrivetRouter from "../privetRouts/PrivetRouter";
 import ManageService from "../pages/ManageService";
 import Update from "../componets/Update";
 import BookedService from "../pages/BookedService";
+import ServiceToDo from "../pages/ServiceToDo";
 
 export const routers = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ export const routers = createBrowserRouter([
       {
         path:'/booking',
         element:<PrivetRouter><BookedService></BookedService></PrivetRouter>
+      },
+      {
+        path:'/viewbooking',
+        element:<PrivetRouter><ServiceToDo></ServiceToDo></PrivetRouter>
       },
       {
         path: "/login",

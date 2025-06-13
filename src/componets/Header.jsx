@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { AuthContex } from "../Contex/AuthContex";
 import Swal from "sweetalert2";
 
+
 const Header = () => {
   const { user, logOut } = useContext(AuthContex);
   const handleLogout = () => {
@@ -101,7 +102,7 @@ const Header = () => {
                     <Link to='/booking'>Booked service</Link>
                   </li>
                   <li>
-                    <Link>Service-To-Do</Link>
+                    <Link to='/viewbooking'>Service-To-Do</Link>
                   </li>
                 </ul>
               </details>

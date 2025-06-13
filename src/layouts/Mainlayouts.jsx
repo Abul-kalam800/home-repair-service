@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import Header from "../componets/Header";
 import Footer from "../componets/Footer";
-import PopularService from "../componets/PopularService";
+
 
 const Mainlayouts = () => {
   return (
