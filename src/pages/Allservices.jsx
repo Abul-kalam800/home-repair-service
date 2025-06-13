@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import ServiceCard from '../componets/ServiceCard';
 
 
 const Allservices = () => {
-    const allServices = useLoaderData()
-
+    // const allServices = useLoaderData()
+    const [search, setSearch] = useState("");
+    const [services,setServices]=useState([])
+     useEffect(() => {
+    fetch(`http://localhost:3000/services?searchParams=${search}`)
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, [search]);
+  console.log(services)
+   console.log(search)
     return (
         <div className='w-11/12 mx-auto'>
             <title>All-services</title>
-            <h2 className='text-5xl font-semibold text-center my-20'>Our  All Services Avaiable </h2>
+            <h2 className='text-2xl md:text-5xl font-semibold md:text-center md:my-10 mt-10'>Our  All Services Avaiable </h2>
            <div className=''>
+            <input type="text" name="search" id=""  placeholder='Search by name' className='input w-full my-10 p-6 rounded-4xl border-3 '  onChange={(e) => setSearch(e.target.value)}/>
              {
-                allServices.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
+                services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
             }
            </div>
 

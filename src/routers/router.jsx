@@ -29,7 +29,7 @@ export const routers = createBrowserRouter([
         path: "/allservices",
         hydrateFallbackElement: <Loading></Loading>,
         Component: Allservices,
-        loader: () => fetch("http://localhost:3000/allservices"),
+        // loader: () => fetch("http://localhost:3000/allservices"),
       },
       {
         path: "/allservices/:id",
