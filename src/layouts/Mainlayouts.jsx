@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import Header from "../componets/Header";
 import Footer from "../componets/Footer";
+import Upcoming from "../componets/Upcoming";
 
 
 const Mainlayouts = () => {
@@ -12,7 +13,7 @@ const Mainlayouts = () => {
          <Outlet></Outlet>
       </div>
       <main className="max-w-7xl mx-auto">
-       
+        <Upcoming></Upcoming>
       </main>
       <Footer></Footer>
     </div>

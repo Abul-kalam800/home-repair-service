@@ -2,6 +2,7 @@ import { use, useContext } from "react";
 import { Link } from "react-router";
 import { AuthContex } from "../Contex/AuthContex";
 import Swal from "sweetalert2";
+import logo from "../assets/logohomeservices1.png";
 
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-9 w-9"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -76,7 +77,7 @@ const Header = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost text-xl">
-          HomeRepair
+        <img src={logo} alt="" className="w-24"/>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
