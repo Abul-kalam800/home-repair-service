@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from '../componets/Banner';
 import { useLoaderData } from 'react-router';
 import PopularService from '../componets/PopularService';
+import Upcoming from '../componets/Upcoming';
+import OurPartner from '../componets/OurPartner';
 
  
 const servicesPromies = fetch('http://localhost:3000/popular_services')
@@ -16,7 +18,8 @@ const Home = () => {
             <div className='max-w-7xl mx-auto'>
             <PopularService servicesPromies={servicesPromies}></PopularService>
             </div>
-
+            <Upcoming></Upcoming>
+            <OurPartner></OurPartner>
         </div>
     );
 };

@@ -1,13 +1,24 @@
 import React from "react";
 import { Link } from "react-router";
-
+import { motion } from "motion/react";
 const PopularServicesCard = ({ service }) => {
- 
-  const { providerImage, providerName, serviceImage, serviceName, price,longDescription,_id } =
-    service;
+  const {
+    providerImage,
+    providerName,
+    serviceImage,
+    serviceName,
+    price,
+    longDescription,
+    _id,
+  } = service;
 
   return (
-    <div className="flex flex-col space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-10">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      transition={{ duration: 2 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      className="flex flex-col space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-10"
+    >
       <img
         src={serviceImage}
         alt=""
@@ -36,12 +47,17 @@ const PopularServicesCard = ({ service }) => {
           </div>
         </div>
         <h2 className="my-4 text-xl font-semibold">{serviceName}</h2>
-        <p className="text-sm dark:text-gray-600 pb-1">{longDescription.slice(0,100)}...
-           
+        <p className="text-sm dark:text-gray-600 pb-1">
+          {longDescription.slice(0, 100)}...
         </p>
-        <button> <Link to={`allservices/${_id}`} className="btn btn-primary ml-1 mt-3">View Details</Link></button>
+        <button>
+          {" "}
+          <Link to={`allservices/${_id}`} className="btn btn-primary ml-1 mt-3">
+            View Details
+          </Link>
+        </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
