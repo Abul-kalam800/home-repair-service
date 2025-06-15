@@ -8,7 +8,7 @@ const Allservices = () => {
     const [search, setSearch] = useState("");
     const [services,setServices]=useState([])
      useEffect(() => {
-    fetch(`http://localhost:3000/services?searchParams=${search}`)
+    fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/services?searchParams=${search}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [search]);

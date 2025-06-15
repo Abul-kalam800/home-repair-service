@@ -13,7 +13,7 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
     _id,
     servicesLocation,
   } = service;
-  console.log(_id)
+
 
   const handleDelet = (id) => {
     console.log(id);
@@ -27,7 +27,7 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/allservices/${_id}`, {
+        fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

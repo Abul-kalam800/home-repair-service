@@ -27,7 +27,7 @@ const ServicesDetails = () => {
     const allFormData = Object.fromEntries(formData.entries());
     console.log(allFormData);
     axios
-      .post("http://localhost:3000/booking", allFormData)
+      .post("https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/booking", allFormData)
       .then((res) => {
         document.getElementById('my_modal_5').close();
         if (res.data.insertedId) {

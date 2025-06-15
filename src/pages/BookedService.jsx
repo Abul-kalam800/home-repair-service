@@ -1,22 +1,22 @@
-import React, { Suspense, use } from 'react';
-import MybookingService from '../componets/MybookingService';
-import { bookingPromiesBymail } from '../shared/bookingApiPromies';
-import { AuthContex } from '../Contex/AuthContex';
-
+import React, { Suspense, use } from "react";
+import MybookingService from "../componets/MybookingService";
+import { bookingPromiesBymail } from "../shared/bookingApiPromies";
+import { AuthContex } from "../Contex/AuthContex";
+import useBookinPromiesApi from "../api/useBookinPromiesApi";
 
 const BookedService = () => {
-    const {user}=use(AuthContex)
-    return (
-        <div>
-          <title>Bookservices</title>
-            <Suspense fallback={<span>Loading............</span>}>
-               <MybookingService
-                bookingPromiesBymail={bookingPromiesBymail(user.email)}
-               >
-                </MybookingService> 
-            </Suspense>
-        </div>
-    );
+  const { user } = use(AuthContex);
+  const { bookingPromiesBymail } = useBookinPromiesApi();
+  return (
+    <div>
+      <title>Bookservices</title>
+      <Suspense fallback={<span>Loading............</span>}>
+        <MybookingService
+          bookingPromiesBymail={bookingPromiesBymail(user.email)}
+        ></MybookingService>
+      </Suspense>
+    </div>
+  );
 };
 
 export default BookedService;

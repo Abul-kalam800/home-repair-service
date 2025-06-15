@@ -15,11 +15,11 @@ const MyserviceBookinCard = ({ myservice }) => {
   } = myservice;
  
 
-  console.log(myservice);
+ 
   const handleStatus = (e,book_id)=>{
   
  console.log(e.target.value,book_id)
- axios.patch(`http://localhost:3000/myservicesbookings/${book_id}`,{status:e.target.value})
+ axios.patch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/myservicesbookings/${book_id}`,{status:e.target.value})
  .then(res=>{
     console.log(res.data)
     if(res.data. modifiedCount){

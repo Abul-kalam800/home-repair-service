@@ -1,5 +1,5 @@
 import { use, useContext } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { AuthContex } from "../Contex/AuthContex";
 import Swal from "sweetalert2";
 import logo from "../assets/logohomeservices1.png";
@@ -48,10 +48,10 @@ const Header = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/allservices">Services</Link>
+              <NavLink to="/allservices">Services</NavLink>
             </li>
             {user && (
               <li>
@@ -94,16 +94,16 @@ const Header = () => {
                 <summary>Dashboard</summary>
                 <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
                   <li>
-                    <Link to='/addservices'>Add services</Link>
+                    <NavLink to='/addservices' >Add services</NavLink>
                   </li>
                   <li>
-                    <Link to='/manageservice'>Manage service</Link>
+                    <NavLink to='/manageservice'>Manage service</NavLink>
                   </li>
                   <li>
-                    <Link to='/booking'>Booked service</Link>
+                    <NavLink to='/booking'>Booked service</NavLink>
                   </li>
                   <li>
-                    <Link to='/viewbooking'>Service-To-Do</Link>
+                    <NavLink to='/viewbooking'>Service-To-Do</NavLink>
                   </li>
                 </ul>
               </details>

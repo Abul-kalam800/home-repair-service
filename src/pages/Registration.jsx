@@ -80,6 +80,7 @@ const Registration = () => {
               className="input"
               name="name"
               placeholde="Name"
+              required
             />
             <label className="label">Email</label>
             <input
@@ -87,6 +88,7 @@ const Registration = () => {
               className="input"
               name="email"
               placeholder="Email"
+              required
             />
             <label className="label">Password</label>
             <input
@@ -94,6 +96,7 @@ const Registration = () => {
               className="input"
               name="password"
               placeholder="Password"
+              required
             />
             <label className="label">Photo URL</label>
             <input
@@ -101,6 +104,7 @@ const Registration = () => {
               className="input"
               name="photo"
               placeholder="Photo URL"
+              required
             />
             <div>
               <p className="">

@@ -13,7 +13,7 @@ const Addservices = () => {
     const allFormData = Object.fromEntries(formData.entries());
     const newService = allFormData;
     axios
-      .post("http://localhost:3000/allservices", newService)
+      .post("https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices", newService)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -49,6 +49,7 @@ const Addservices = () => {
               type="text"
               className="input w-full"
               placeholder="Image URL"
+              required
             />
           </fieldset>
           <fieldset className="fieldset">
@@ -58,6 +59,7 @@ const Addservices = () => {
               type="text"
               className="input w-full"
               placeholder="Service Name"
+              required
             />
           </fieldset>
           <fieldset className="fieldset">
@@ -67,6 +69,7 @@ const Addservices = () => {
               name="price"
               className="input w-full"
               placeholder="Price"
+              required
             />
           </fieldset>
           <fieldset className="fieldset">
@@ -76,6 +79,7 @@ const Addservices = () => {
               type="text"
               className="input w-full"
               placeholder="Service Area"
+              required
             />
           </fieldset>
 
@@ -86,6 +90,7 @@ const Addservices = () => {
               type="textarea"
               className="input w-full"
               placeholder="Description"
+              required
             />
           </fieldset>
           <fieldset className="fieldset">

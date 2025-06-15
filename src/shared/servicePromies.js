@@ -1,4 +1,8 @@
-  export const servicesCreatedbyPromies = (email)=>{
-    return fetch(`http://localhost:3000/allservices?email=${email}`)
+  export const servicesCreatedbyPromies = (email,accessToken)=>{
+    return fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices?email=${email}`,{
+      headers:{
+        authorization:`Bearer ${accessToken}`
+      }
+      })
     .then(res=>res.json())
   }

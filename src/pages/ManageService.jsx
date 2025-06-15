@@ -2,10 +2,13 @@
 import MyservicesList from '../componets/MyservicesList';
 import { AuthContex } from '../Contex/AuthContex';
 import { servicesCreatedbyPromies } from '../shared/servicePromies';
+import useMyAllService from '../api/useMyallService';
 
  
  const ManageService = () => {
     const {user}= use(AuthContex)
+    const {servicesCreatedbyPromies}=useMyAllService()
+   
     return (
         <div>
             <title>Manage-services</title>

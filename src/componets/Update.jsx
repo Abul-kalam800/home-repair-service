@@ -27,7 +27,7 @@ const Update = () => {
     console.log(UpdateData);
 
     axios
-      .put(`http://localhost:3000/allservices/${_id}`, UpdateData)
+      .put(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${_id}`, UpdateData)
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({
