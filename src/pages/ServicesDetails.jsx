@@ -42,7 +42,7 @@ const ServicesDetails = () => {
         
       })
       .catch((error) => {
-        console.log(error);
+      
       });
   };
   return (

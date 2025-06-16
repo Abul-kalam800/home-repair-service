@@ -43,7 +43,7 @@ const Registration = () => {
             });
           })
           .catch((error) => {
-            console.log(error);
+           
           });
         // aleart successfully
       })

@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
       subcrib();
     };
   }, []);
-  console.log(user);
+
 
   return <AuthContex value={userInfo}>{children}</AuthContex>;
 };

@@ -18,7 +18,7 @@ const useAxieoSecure = () => {
     error => {
       if (error.status == 401 || error.status==403) {
         logOut()
-          .then(() => console.log("User log out for statsu 4o1"))
+          .then(() => console.log("User log out for statsu 4o1 for-bidden"))
           .catch((err) => {
            
           });
