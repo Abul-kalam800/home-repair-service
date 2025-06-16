@@ -30,7 +30,7 @@ const PopularService = ({ servicesPromies }) => {
       </div>
       <div className="max-w-7xl flex justify-center mx-auto mb-10">
         <Link to="/allservices">
-          <button className="btn btn-primary ">Show All</button>
+          <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full ">Show All</button>
         </Link>
       </div>
     </div>

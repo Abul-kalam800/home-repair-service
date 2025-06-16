@@ -16,7 +16,7 @@ const BookingCard = ({ booking }) => {
       <div className=" ">
         <img src={serviceImage} alt="img" className="rounded-2xl" />
       </div>
-      <p className="text-4xl font-semibold my-5">{serviceName}</p>
+      <p className="text-2xl md:text-4xl font-semibold my-5">{serviceName}</p>
       <p><span className="text-lg font-semibold">Id: </span>{service_id}</p>
       <p><span className="text-lg font-semibold">Provider-Email: </span>{providerEmail}</p>
       <p><span className="text-lg font-semibold"> Provider-Name: </span>{providerName}</p>

@@ -127,7 +127,7 @@ const Addservices = () => {
         </div>
         <input
           type="submit"
-          className="input w-full mt-7 bg-primary text-white font-semibold text-xl cursor-pointer "
+          className="input w-full mt-7 bg-linear-to-l from-fuchsia-400 to-indigo-500 rounded-full text-white font-semibold text-xl cursor-pointer "
           value="Add Service"
         />
       </form>

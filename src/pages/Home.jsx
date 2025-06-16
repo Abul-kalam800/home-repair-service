@@ -4,6 +4,7 @@ import { useLoaderData } from 'react-router';
 import PopularService from '../componets/PopularService';
 import Upcoming from '../componets/Upcoming';
 import OurPartner from '../componets/OurPartner';
+import Review from '../componets/Review';
 
  
 const servicesPromies = fetch('https://homerepairservices-server.vercel.app/popular_services')
@@ -20,6 +21,7 @@ const Home = () => {
             </div>
             <Upcoming></Upcoming>
             <OurPartner></OurPartner>
+            <Review></Review>
         </div>
     );
 };

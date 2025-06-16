@@ -52,7 +52,7 @@ const PopularServicesCard = ({ service }) => {
         </p>
         <button>
           {" "}
-          <Link to={`allservices/${_id}`} className="btn btn-primary ml-1 mt-3">
+          <Link to={`allservices/${_id}`} className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full ml-1 mt-3">
             View Details
           </Link>
         </button>

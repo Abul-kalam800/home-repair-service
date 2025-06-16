@@ -9,9 +9,13 @@ const MyserviceBookList = ({ serviceProviderBookingPromise }) => {
   return <>
      {
 
-      myservices.length===0?<h3 className="text-4xl my-6">Your Service Not yet booking, Wait for booking </h3>
+      myservices.length===0? <h3 className="text-2xl text-warning lg:text-3xl my-20 text-center">Your Service Not yet booking, Wait for booking </h3>
       :
+      <>
+         <h1  className='text-3xl md:text-5xl font-semibold text-center my-10'>Service to do </h1>
+            <p  className="mt-8 text-lg text-center md:w-8/12 mx-auto">Here yor can update you staus option ,Where will be default pending, then you cand working,and complete opti </p>
       <h2 className="text-2xl  text-center md:text-4xl font-semibold my-10">My Service Booking List: {myservices.length}</h2>
+      </>
 
     }
 

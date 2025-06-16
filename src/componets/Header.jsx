@@ -23,7 +23,7 @@ const Header = () => {
       });
   };
   return (
-  <div className="bg-primary shadow-sm sticky w-full top-0  z-999">
+  <div className="bg-linear-to-l from-red-300 to-blue-500 shadow-sm sticky w-full top-0  z-999">
       <div className="navbar max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-green-500 rounded-box z-1 mt-3 w-90 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-green-500 rounded-box z-1 mt-3 w-90 p-2 shadow font-semibold"
           >
             <li>
               <NavLink to="/">Home</NavLink>
@@ -57,7 +57,7 @@ const Header = () => {
               <li>
                 <details className="dropdown">
                   <summary>Dashboard</summary>
-                  <ul className="menu dropdown-content bg-secondary z-1 w-94 p-2 shadow-sm">
+                  <ul className="menu dropdown-content bg-secondary z-1 w-90 p-2 shadow-sm font-semibold">
                     <li>
                       <Link to='/addservices'>Add services</Link>
                     </li>
@@ -94,7 +94,7 @@ const Header = () => {
             <li>
               <details className="dropdown">
                 <summary>Dashboard</summary>
-                <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
+                <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm font-semibold">
                   <li>
                     <NavLink to='/addservices' >Add services</NavLink>
                   </li>
@@ -113,8 +113,8 @@ const Header = () => {
           )}
         </ul>
       </div>
-      <div className="navbar-end">
-      <label className="swap swap-rotate">
+      <div className="navbar-end ">
+      <label className="swap swap-rotate mr-7">
   {/* this hidden checkbox controls the state */}
   <input type="checkbox" className="theme-controller" value="light" />
 
@@ -139,7 +139,7 @@ const Header = () => {
         {user ? (
           <>
             
-            <button className="btn btn-secondary" onClick={handleLogout}>
+            <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  outline-0 mr-5" onClick={handleLogout}>
               Logout
             </button>
             <div className="w-[40px] h-[40px]">
@@ -148,10 +148,10 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn btn-secondary ml-5">
+            <Link to="/login" className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 outline-0 rounded-full  ml-5">
               Login
             </Link>
-            <Link to="/registration" className="btn btn-secondary ml-5 lg:inline lg:text-center  hidden">
+            <Link to="/registration" className="btn btn-secondary ml-5  lg:text-center  hidden">
               Registration
             </Link>
           </>
