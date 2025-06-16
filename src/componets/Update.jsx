@@ -24,7 +24,7 @@ const Update = () => {
     const form = e.target;
     const formData = new FormData(form);
     const UpdateData = Object.fromEntries(formData.entries());
-    console.log(UpdateData);
+    
 
     axios
       .put(`https://homerepairservices-server.vercel.app/allservices/${_id}`, UpdateData)
@@ -40,7 +40,13 @@ const Update = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+         Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: `Your are  in error:  ${error}`,
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
       });
   };
   return (

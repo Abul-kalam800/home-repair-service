@@ -25,7 +25,7 @@ const ServicesDetails = () => {
     const form = e.target;
     const formData = new FormData(form);
     const allFormData = Object.fromEntries(formData.entries());
-    console.log(allFormData);
+   
     axios
       .post("https://homerepairservices-server.vercel.app/booking", allFormData)
       .then((res) => {
@@ -39,7 +39,7 @@ const ServicesDetails = () => {
              timer: 1500,
           });
         }
-        console.log(res.data);
+        
       })
       .catch((error) => {
         console.log(error);

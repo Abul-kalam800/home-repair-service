@@ -26,7 +26,13 @@ const Addservices = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        Swal.fire({
+                 position: "top-end",
+                 icon: "success",
+                 title: `Your are logout successfully ${error}`,
+                 showConfirmButton: false,
+                 timer: 1500,
+               });
       });
   };
 

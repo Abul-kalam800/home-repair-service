@@ -20,7 +20,7 @@ const useAxieoSecure = () => {
         logOut()
           .then(() => console.log("User log out for statsu 4o1"))
           .catch((err) => {
-            console.log("error 401", err);
+           
           });
       }
    

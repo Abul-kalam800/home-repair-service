@@ -19,7 +19,13 @@ const Header = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
+         Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `Your has been error this message:  ${error}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
   return (

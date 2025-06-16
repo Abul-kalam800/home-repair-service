@@ -18,10 +18,10 @@ const MyserviceBookinCard = ({ myservice }) => {
  
   const handleStatus = (e,book_id)=>{
   
- console.log(e.target.value,book_id)
+
  axios.patch(`https://homerepairservices-server.vercel.app/myservicesbookings/${book_id}`,{status:e.target.value})
  .then(res=>{
-    console.log(res.data)
+   
     if(res.data. modifiedCount){
           Swal.fire({
                     position: "top-end",
@@ -34,7 +34,13 @@ const MyserviceBookinCard = ({ myservice }) => {
     }
  })
  .catch(error=>{
-    console.log(error)
+     Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: `Your are in error ${error}`,
+              showConfirmButton: false,
+              timer: 1500,
+            });
  })
   }
 

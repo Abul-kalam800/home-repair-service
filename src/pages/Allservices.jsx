@@ -12,8 +12,7 @@ const Allservices = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [search]);
-  console.log(services)
-   console.log(search)
+
     return (
         <div className='max-w-7xl mx-auto'>
             <title>All-services</title>

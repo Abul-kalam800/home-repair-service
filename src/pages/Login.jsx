@@ -14,10 +14,10 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    
     singIn(email, password)
       .then((result) => {
-        console.log(result.user);
+       
         navigation(`${location.state ? location.state : "/"}`);
         Swal.fire({
           position: "top-end",
@@ -28,14 +28,20 @@ const Login = () => {
         });
       })
       .catch((error) => {
-        console.log(error.message);
+       Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `Your are in error${error}`,
+                showConfirmButton: false,
+                timer: 1500,
+              });
       });
   };
   const handleGoogle = () => {
     // signin google
     googleSign(loginProvider)
       .then((result) => {
-        console.log(result.user);
+     
         navigation(`${location.state ? location.state : "/"}`);
         Swal.fire({
           position: "top-end",

@@ -17,11 +17,11 @@ const Registration = () => {
     const password = form.password.value;
     const photo = form.photo.value;
 
-    console.log(name, email, password, photo);
+   
     // creat user
     creatUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        
         // updateProfile 
         uptoProfile({
           displayName: name,
@@ -30,7 +30,7 @@ const Registration = () => {
           .then(() => {
             const userProfile = { ...user, displayName: name, photoURL: photo };
             setUser(userProfile);
-            console.log(location);
+        
 
             navigation(`${location.state ? location.state : "/"}`);
             Swal.fire({
@@ -48,13 +48,19 @@ const Registration = () => {
         // aleart successfully
       })
       .catch((error) => {
-        console.log(error);
+       Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: `you are in eeror ${error}`,
+                showConfirmButton: false,
+                timer: 1500,
+              });
       });
   };
   const handleGoogle = () => {
     googleSign(registerProvider)
       .then((result) => {
-        console.log(result.user);
+       
         navigation(`${location.state ? location.state : "/"}`);
         Swal.fire({
           position: "top-end",
@@ -65,7 +71,13 @@ const Registration = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
+        Swal.fire({
+                 position: "top-end",
+                 icon: "success",
+                 title: `Your are logout successfully ${error}`,
+                 showConfirmButton: false,
+                 timer: 1500,
+               });
       });
   };
   return (
