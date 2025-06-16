@@ -13,7 +13,7 @@ const Footer = () => {
           <img src={logo} alt="logo"  className="w-[300px]"/>
       </Link>
         <nav className="flex flex-col gap-3 ">
-          <h6 className="footer-title">Services</h6>
+          <h6 className="footer-title">Pages</h6>
           <a className="link link-hover">Ac-Repair</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Elctrical</a>
@@ -22,7 +22,7 @@ const Footer = () => {
 
         <nav className="flex flex-col gap-3">
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
+          <a className="link link-hover">Terms of Condition</a>
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>

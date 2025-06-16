@@ -3,7 +3,7 @@ import { AuthContex } from "../Contex/AuthContex";
 import axios from "axios";
 
 const AxiosInstance = axios.create({
-  baseURL: "https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app",
+  baseURL: "https://homerepairservices-server.vercel.app",
 });
 const useAxieoSecure = () => {
   const { user, logOut } = useContext(AuthContex)

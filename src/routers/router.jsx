@@ -29,7 +29,7 @@ export const routers = createBrowserRouter([
         path: "/allservices",
         hydrateFallbackElement: <Loading></Loading>,
         Component: Allservices,
-        // loader: () => fetch("https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices"),
+        // loader: () => fetch("https://homerepairservices-server.vercel.app/allservices"),
       },
       {
         path: "/allservices/:id",
@@ -40,7 +40,7 @@ export const routers = createBrowserRouter([
           </PrivetRouter>
         ),
         loader: ({ params }) =>
-          fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${params.id}`),
+          fetch(`https://homerepairservices-server.vercel.app/allservices/${params.id}`),
       },
       {
         path: "/addservices",
@@ -61,7 +61,7 @@ export const routers = createBrowserRouter([
       {
         path:'/update/:id',
        element:<PrivetRouter><Update></Update></PrivetRouter>,
-        loader:({params})=> fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${params.id}`)
+        loader:({params})=> fetch(`https://homerepairservices-server.vercel.app/allservices/${params.id}`)
       },
       {
         path:'/booking',

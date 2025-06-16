@@ -6,7 +6,7 @@ import Upcoming from '../componets/Upcoming';
 import OurPartner from '../componets/OurPartner';
 
  
-const servicesPromies = fetch('https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/popular_services')
+const servicesPromies = fetch('https://homerepairservices-server.vercel.app/popular_services')
 .then(res=>res.json())
 const Home = () => {
     

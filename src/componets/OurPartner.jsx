@@ -14,7 +14,7 @@ const OurPartner = () => {
       initial={{ opacity: 0, translateX:"100%" }}
       transition={{ duration: 2 }}
       
-      whileInView={{ opacity: 1, translateX: 0 }}
+      whileInView={{ opacity: 1, translateX: 0, overflow:"hidden" }}
     
       className='mb-20'>
             <h3 className='text-5xl text-center my-20'>Our <motion.span

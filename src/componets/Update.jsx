@@ -27,7 +27,7 @@ const Update = () => {
     console.log(UpdateData);
 
     axios
-      .put(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${_id}`, UpdateData)
+      .put(`https://homerepairservices-server.vercel.app/allservices/${_id}`, UpdateData)
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({
@@ -45,10 +45,10 @@ const Update = () => {
   };
   return (
     <div className=" max-w-7xl mx-auto">
-      <h3 className="text-3xl font-semibold my-4 text-center">
+      <h3 className="text-3xl md:text-5xl font-semibold my-4 text-center">
         Update Service As You want
       </h3>
-      <div className="md:p-20">
+      <div className="md:p-20 p-5">
         <form onSubmit={handleUpdate}>
           <div className=" grid md:grid-cols-2 gap-5 ">
             <fieldset className="fieldset">
@@ -137,8 +137,8 @@ const Update = () => {
 
           <input
             type="submit"
-            className="input w-full mt-7 bg-primary cursor-pointer "
-            value="Update"
+            className="input w-full mt-7 bg-primary cursor-pointer text-white "
+            value="UPDATE"
           />
 
           {/* if there is a button in form, it will close the modal */}

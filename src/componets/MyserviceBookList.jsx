@@ -11,7 +11,8 @@ const MyserviceBookList = ({ serviceProviderBookingPromise }) => {
 
       myservices.length===0?<h3 className="text-4xl my-6">Your Service Not yet booking, Wait for booking </h3>
       :
-      <h2 className="text-4xl font-semibold my-10">My Service Booking List: {myservices.length}</h2>
+      <h2 className="text-2xl  text-center md:text-4xl font-semibold my-10">My Service Booking List: {myservices.length}</h2>
+
     }
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

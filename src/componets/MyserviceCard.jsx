@@ -14,7 +14,6 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
     servicesLocation,
   } = service;
 
-
   const handleDelet = (id) => {
     console.log(id);
     Swal.fire({
@@ -27,9 +26,12 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://homerepairservices-server.vercel.app/allservices/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
@@ -51,32 +53,40 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
     });
   };
   return (
-    <div className="pb-5 ">
+    <div className="pb-5 bg-base-200 ">
       <div className=" ">
         <img src={serviceImage} alt="" className=" rounded-2xl" />
       </div>
-      <p className="text-4xl font-semibold  my-7">{serviceName}</p>
-      <img src={providerImage} alt="photo" className="w-12 h-12 rounded-full" />
-      <p className="mt-5">
-        <span className="font-semibold text-lg">Name : </span>
-        {providerName}
-      </p>
-      <p className="mt-2">
-        <span className="font-semibold text-lg">Service Location : </span>{" "}
-        {servicesLocation}
-      </p>
-      <p className="mt-2">
-        <span className="font-semibold text-lg">Price : </span> {price}
-      </p>
+      <div className="pl-5">
+        <p className="text-4xl font-semibold  my-7">{serviceName}</p>
+        <img
+          src={providerImage}
+          alt="photo"
+          className="w-12 h-12 rounded-full"
+        />
+        <p className="mt-5">
+          <span className="font-semibold text-lg">Name : </span>
+          {providerName}
+        </p>
+        <p className="mt-2">
+          <span className="font-semibold text-lg">Service Location : </span>{" "}
+          {servicesLocation}
+        </p>
+        <p className="mt-2">
+          <span className="font-semibold text-lg">Price : </span> {price}
+        </p>
+      </div>
 
       {/* Edit button  */}
-      <div className="flex justify-end gap-6">
+      <div className="flex md:justify-end gap-6 flex-col mt-5">
         <Link to={`/update/${_id}`}>
-         
-          <button className="btn btn-primary">Edit</button>
+          <button className="btn btn-primary w-full">EDIT</button>
         </Link>
-        <button onClick={()=>handleDelet(_id)} className="btn btn-primary">
-          Delet
+        <button
+          onClick={() => handleDelet(_id)}
+          className="btn btn-primary w-full"
+        >
+          DELET
         </button>
       </div>
     </div>

@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-green-500 rounded-box z-1 mt-3 w-90 p-2 shadow"
           >
             <li>
               <NavLink to="/">Home</NavLink>
@@ -57,7 +57,7 @@ const Header = () => {
               <li>
                 <details className="dropdown">
                   <summary>Dashboard</summary>
-                  <ul className="menu dropdown-content bg-base-100 z-1 w-52 p-2 shadow-sm">
+                  <ul className="menu dropdown-content bg-secondary z-1 w-94 p-2 shadow-sm">
                     <li>
                       <Link to='/addservices'>Add services</Link>
                     </li>
@@ -68,7 +68,7 @@ const Header = () => {
                       <Link to='/booking'>Booked service</Link>
                     </li>
                     <li>
-                      <Link>Service-To-Do</Link>
+                      <Link to='/viewbooking'>Service-To-Do</Link>
                     </li>
                   </ul>
                 </details>
@@ -76,9 +76,11 @@ const Header = () => {
             )}
           </ul>
         </div>
-        <Link to="/">
-        <img src={logo} alt="logo" className="w-24 h-16"/>
+       <div>
+         <Link to="/">
+        <img src={logo} alt="logo" className=" w-24 h-16 "/>
         </Link>
+       </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -149,7 +151,7 @@ const Header = () => {
             <Link to="/login" className="btn btn-secondary ml-5">
               Login
             </Link>
-            <Link to="/registration" className="btn btn-secondary ml-5">
+            <Link to="/registration" className="btn btn-secondary ml-5 lg:inline lg:text-center  hidden">
               Registration
             </Link>
           </>

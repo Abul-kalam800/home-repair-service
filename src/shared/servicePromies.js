@@ -1,5 +1,5 @@
   export const servicesCreatedbyPromies = (email,accessToken)=>{
-    return fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices?email=${email}`,{
+    return fetch(`https://homerepairservices-server.vercel.app/allservices?email=${email}`,{
       headers:{
         authorization:`Bearer ${accessToken}`
       }

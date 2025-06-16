@@ -1,5 +1,5 @@
 export const bookingPromiesBymail = (email,accessToken)=>{
-    return fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/booking?email=${email}`,{
+    return fetch(`https://homerepairservices-server.vercel.app/booking?email=${email}`,{
         headers:{
             authorization:`Bearer ${accessToken}`
         }
@@ -8,6 +8,6 @@ export const bookingPromiesBymail = (email,accessToken)=>{
 }
 
 export const serviceProviderBookingPromise = (serviceProvider)=>{
-    return fetch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/myservicesbookings?providerEmail=${serviceProvider}`)
+    return fetch(`https://homerepairservices-server.vercel.app/myservicesbookings?providerEmail=${serviceProvider}`)
     .then(res=>res.json())
 }

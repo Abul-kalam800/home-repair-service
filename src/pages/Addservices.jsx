@@ -13,7 +13,7 @@ const Addservices = () => {
     const allFormData = Object.fromEntries(formData.entries());
     const newService = allFormData;
     axios
-      .post("https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/allservices", newService)
+      .post("https://homerepairservices-server.vercel.app/allservices", newService)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -37,7 +37,8 @@ const Addservices = () => {
 
         <title>Add-services </title>
      
-      <h2 className="text-5xl font-semibold text-center mt-10">Add Services</h2>
+      <h2 className="text-3xl md:text-5xl font-semibold text-center mt-10">Add Services</h2>
+      <p className="mt-8 text-lg text-center md:w-8/12 mx-auto">Add your Best service whice section you are expert, Our website just help you publish your skills and service. So Add service what you want so add that on.</p>
       <form onSubmit={handleAddservice} className="p-5 md:p-30">
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 ">
           <fieldset className="fieldset">
@@ -126,7 +127,7 @@ const Addservices = () => {
         </div>
         <input
           type="submit"
-          className="input w-full mt-7 bg-primary cursor-pointer "
+          className="input w-full mt-7 bg-primary text-white font-semibold text-xl cursor-pointer "
           value="Add Service"
         />
       </form>

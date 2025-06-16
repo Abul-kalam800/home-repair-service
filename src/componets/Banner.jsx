@@ -31,7 +31,7 @@ const Banner = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-xl">
-          <h1 className="mb-5 text-6xl font-bold">We are Professonal Woodmeker </h1>
+          <h1 className="mb-5 text-2xl md:text-6xl font-bold">We are Professonal Woodmeker </h1>
           <p className="mb-5">
           We provide wood services and repair old home and house, Just a call and contact with us, We will solve your problem.
           </p>
@@ -52,9 +52,9 @@ const Banner = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-xl">
-          <h1 className="mb-5 text-6xl font-bold">We are Professonal Woodmeker </h1>
+          <h1 className="mb-5 text-2xl md:text-6xl font-bold">We are Professonal Designer  </h1>
           <p className="mb-5">
-          We provide wood services and repair old home and house, Just a call and contact with us, We will solve your problem.
+          We offer Best Desgin services for our client.Explore with us for best services.
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>
@@ -72,9 +72,9 @@ const Banner = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-xl">
-          <h1 className="mb-5 text-6xl font-bold">We are Professonal Woodmeker </h1>
+          <h1 className="mb-5 text-2xl md:text-6xl font-bold">We are Professonal Engennier </h1>
           <p className="mb-5">
-          We provide wood services and repair old home and house, Just a call and contact with us, We will solve your problem.
+            We provided our best service in Engeniier field, We used modern tecnolgy whice help us beeter for our Build house.
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>

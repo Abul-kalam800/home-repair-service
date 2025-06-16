@@ -19,7 +19,7 @@ const MyserviceBookinCard = ({ myservice }) => {
   const handleStatus = (e,book_id)=>{
   
  console.log(e.target.value,book_id)
- axios.patch(`https://homerepairservices-server-i5pbxvonn-abul-kalam800s-projects.vercel.app/myservicesbookings/${book_id}`,{status:e.target.value})
+ axios.patch(`https://homerepairservices-server.vercel.app/myservicesbookings/${book_id}`,{status:e.target.value})
  .then(res=>{
     console.log(res.data)
     if(res.data. modifiedCount){
@@ -47,15 +47,16 @@ const MyserviceBookinCard = ({ myservice }) => {
         <h3 className="text-3xl font-semibold my-5">{serviceName}</h3>
         <p>{currenUserEmail}</p>
         <p>{currentUserName}</p>
+         <p>{date}</p>
+        <p>{price}</p>
        
-          <select defaultValue={status} onChange={(e)=>{handleStatus(e, myservice._id)}}>
+          <select defaultValue={status} className="select" onChange={(e)=>{handleStatus(e, myservice._id)}}>
             <option value="pending">Pending</option>
             <option value="Working">Working</option>
             <option value="Complete">Complete</option>
           </select>
      
-        <p>{date}</p>
-        <p>{price}</p>
+       
       </div>
     </div>
   );
