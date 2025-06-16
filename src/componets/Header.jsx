@@ -23,7 +23,7 @@ const Header = () => {
       });
   };
   return (
-  <div className="bg-linear-to-l from-red-300 to-blue-500 shadow-sm sticky w-full top-0  z-999">
+  <div className="bg-linear-to-l from-red-300 to-lime-400 shadow-sm sticky w-full top-0  z-999">
       <div className="navbar max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
@@ -139,11 +139,11 @@ const Header = () => {
         {user ? (
           <>
             
-            <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  outline-0 mr-5" onClick={handleLogout}>
+            <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  outline-0  px-2 py-2" onClick={handleLogout}>
               Logout
             </button>
             <div className="w-[40px] h-[40px]">
-              <img className="rounded-full" src={user.photoURL} alt="photo" />
+              <img className="rounded-full w-full" src={user.photoURL} alt="photo" />
             </div>
           </>
         ) : (

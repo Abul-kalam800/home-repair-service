@@ -80,7 +80,7 @@ const ServicesDetails = () => {
       </h2>
       <p className="text-sm  pb-1">{longDescription}</p>
       <button
-        className="btn btn-primary px-10  mt-5 hover:btn-secondary"
+        className="btn bg-linear-to-t from-fuchsia-300 to-indigo-300 rounded-2xl px-10  mt-5 hover:btn-secondary"
         onClick={() => document.getElementById("my_modal_5").showModal()}
       >
         Book Now
@@ -211,12 +211,12 @@ const ServicesDetails = () => {
               </div>
 
               <div className="flex justify-between mt-5 gap-5">
-                <button type="submit" className=" btn btn-secondary px-5">
+                <button type="submit" className=" btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  px-5">
                   PURCHEASE
                 </button>
                 <button
                   type="button"
-                  className="btn bg-red-700"
+                  className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full"
                   onClick={() => document.getElementById("my_modal_5").close()}
                 >
                   CLOSE

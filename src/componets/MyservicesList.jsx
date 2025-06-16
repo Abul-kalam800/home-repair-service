@@ -6,7 +6,7 @@ const MyservicesList = ({ servicesCreatedbyPromies }) => {
   const [servicesCard, setServicesCard] = useState(services);
 
   return (
-    <div>
+    <div className="my-10">
       {
         servicesCard.length == 0 ?  <h2 className="text-2xl text-center md:text-3xl text-warning font-semibold my-10">You are Not creat any service, Kindly creat service then come back!</h2>:
       <>
