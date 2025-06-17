@@ -47,7 +47,9 @@ const ServicesDetails = () => {
   };
   return (
     <div className="max-w-7xl mx-auto my-10">
-      <h3 className="text-2xl font-semibold mb-7">
+     <div className="px-5">
+
+       <h3 className="text-2xl font-semibold mb-7">
         Service Provider Informetaion
       </h3>
       <div className="flex  gap-3">
@@ -85,6 +87,7 @@ const ServicesDetails = () => {
       >
         Book Now
       </button>
+     </div>
 
       {/* modal  */}
 

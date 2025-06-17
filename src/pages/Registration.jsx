@@ -3,6 +3,8 @@ import { AuthContex } from "../Contex/AuthContex";
 import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router";
 import { GoogleAuthProvider } from "firebase/auth";
+import Lottie from "lottie-react";
+import registationphoto from '../assets/registration.json'
 
 const Registration = () => {
   const location = useLocation();
@@ -81,7 +83,7 @@ const Registration = () => {
       });
   };
   return (
-    <div className="bg-base-200 min-h-screen mx-auto">
+    <div className="my-10 mx-auto flex justify-center items-center lg:flex-row flex-col-reverse ">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto">
         <h1 className="text-5xl font-bold text-center">Registration Now!</h1>
         <div className="card-body space-y-4">
@@ -164,6 +166,9 @@ const Registration = () => {
             Login with Google
           </button>
         </div>
+      </div>
+      <div>
+        <Lottie animationData={registationphoto} loop={true} style={{width: '500px'}}></Lottie>
       </div>
     </div>
   );
