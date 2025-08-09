@@ -29,7 +29,7 @@ const Header = () => {
       });
   };
   return (
-  <div className="bg-linear-to-l from-red-300 to-lime-400 shadow-sm sticky w-full top-0  z-999">
+  <div className="bg-primary shadow-sm sticky w-full top-0  z-999">
       <div className="navbar max-w-7xl mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
@@ -51,10 +51,10 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-green-500 rounded-box z-1 mt-3 w-90 p-2 shadow font-semibold"
+            className="menu menu-sm dropdown-content bg-green-500 rounded-box z-1 mt-3 w-90 p-2 shadow font-bold"
           >
-            <li>
-              <NavLink to="/">Home</NavLink>
+            <li className= 'font-bold'>
+              <NavLink  to="/">Home</NavLink>
             </li>
             <li>
               <NavLink to="/allservices">Services</NavLink>
@@ -84,7 +84,7 @@ const Header = () => {
         </div>
        <div>
          <Link to="/">
-        <img src={logo} alt="logo" className=" w-24 h-16 "/>
+        <img src={logo} alt="logo" className=" w-24 h-16 md:block hidden "/>
         </Link>
        </div>
       </div>
@@ -122,7 +122,7 @@ const Header = () => {
       <div className="navbar-end ">
       <label className="swap swap-rotate mr-7">
   {/* this hidden checkbox controls the state */}
-  <input type="checkbox" className="theme-controller" value="light" />
+  <input type="checkbox" className="theme-controller" value="dark" />
 
   {/* sun icon */}
   <svg
