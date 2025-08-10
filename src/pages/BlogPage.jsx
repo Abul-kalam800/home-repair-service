@@ -61,7 +61,7 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="py-10 bg-gray-50">
+    <div className="py-10 bg-bg-base-200">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-semibold text-center my-10 text-green-400 ">
          Our Blog Section
@@ -74,7 +74,7 @@ const BlogPage = () => {
             return (
               <div
                 key={blog.id}
-                className="bg-white shadow-lg rounded-lg overflow-hidden"
+                className="bg-base-300 shadow-lg rounded-lg overflow-hidden"
               >
                 <img
                   src={blog.img}
@@ -89,16 +89,16 @@ const BlogPage = () => {
                       alt={blog.authorName}
                       className="w-10 h-10 rounded-full mr-3"
                     />
-                    <span className="text-gray-800 font-medium">
+                    <span className="font-medium">
                       {blog.authorName}
                     </span>
                   </div>
-                  <p className="text-gray-700 mb-3">
+                  <p className="mb-3">
                     {isExpanded ? blog.paragraph : preview}
                   </p>
                   <button
                     onClick={() => toggleExpand(blog.id)}
-                    className="text-blue-500 hover:underline"
+                    className="text-blue-500 hover:underline cursor-pointer"
                   >
                     {isExpanded ? "See Less" : "See More"}
                   </button>
