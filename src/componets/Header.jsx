@@ -59,6 +59,9 @@ const Header = () => {
             <li>
               <NavLink to="/allservices">Services</NavLink>
             </li>
+            <li>
+            <Link to="/blog">Blog</Link>
+          </li>
             {user && (
               <li>
                 <details className="dropdown">
@@ -95,6 +98,9 @@ const Header = () => {
           </li>
           <li>
             <Link to="/allservices">Services</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
           </li>
           {user && (
             <li>

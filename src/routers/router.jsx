@@ -13,6 +13,7 @@ import ManageService from "../pages/ManageService";
 import Update from "../componets/Update";
 import BookedService from "../pages/BookedService";
 import ServiceToDo from "../pages/ServiceToDo";
+import BlogPage from "../pages/BlogPage";
 
 export const routers = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const routers = createBrowserRouter([
         hydrateFallbackElement: <Loading></Loading>,
         Component: Allservices,
         // loader: () => fetch("https://homerepairservices-server.vercel.app/allservices"),
+      },
+      {
+        path:'/blog',
+        Component:BlogPage,
       },
       {
         path: "/allservices/:id",

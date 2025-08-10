@@ -52,7 +52,7 @@ const ServiceCard = ({ service }) => {
          <Link to={`/allservices/${_id}`}
             className="btn bg-pink-400 rounded-md  px-10  mt-5 "
           >
-            View Details
+           See More
           </Link>
       </div>
     </div>
