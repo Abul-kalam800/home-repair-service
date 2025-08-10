@@ -214,12 +214,12 @@ const ServicesDetails = () => {
               </div>
 
               <div className="flex justify-between mt-5 gap-5">
-                <button type="submit" className=" btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  px-5">
+                <button type="submit" className=" btn bg-pink-400 rounded-md rounded-full  px-5">
                   PURCHEASE
                 </button>
                 <button
                   type="button"
-                  className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full"
+                  className="btn bg-pink-400 rounded-md rounded-full"
                   onClick={() => document.getElementById("my_modal_5").close()}
                 >
                   CLOSE

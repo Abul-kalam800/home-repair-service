@@ -18,7 +18,7 @@ const PopularService = ({ servicesPromies }) => {
        <div
   
     
-        className="my-14 grid grid-cols-1 lg:grid-cols-2 gap-5
+        className="my-14 grid grid-cols-1 lg:grid-cols-3 gap-7
             "
       >
         {services.map((service) => (
@@ -30,7 +30,7 @@ const PopularService = ({ servicesPromies }) => {
       </div>
       <div className="max-w-7xl flex justify-center mx-auto mb-10">
         <Link to="/allservices">
-          <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full ">Show All</button>
+          <button className="btn bg-pink-400 rounded-md rounded-full ">Show All</button>
         </Link>
       </div>
     </div>

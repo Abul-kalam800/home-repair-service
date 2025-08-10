@@ -143,7 +143,7 @@ const Update = () => {
 
           <input
             type="submit"
-            className="input w-full mt-7 bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full cursor-pointer text-white "
+            className="input w-full mt-7 bg-pink-400 rounded-md cursor-pointer text-white "
             value="UPDATE"
           />
 

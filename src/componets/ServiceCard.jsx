@@ -50,7 +50,7 @@ const ServiceCard = ({ service }) => {
           {longDescription.slice(0, 100)}... 
         </p>
          <Link to={`/allservices/${_id}`}
-            className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full px-10  mt-5 "
+            className="btn bg-pink-400 rounded-md  px-10  mt-5 "
           >
             View Details
           </Link>

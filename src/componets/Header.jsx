@@ -145,7 +145,7 @@ const Header = () => {
         {user ? (
           <>
             
-            <button className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full  outline-0  px-2 py-2" onClick={handleLogout}>
+            <button className="btn bg-pink-400 rounded-md  outline-0  px-2 py-2" onClick={handleLogout}>
               Logout
             </button>
             <div className="w-[40px] h-[40px]">
@@ -154,7 +154,7 @@ const Header = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 outline-0 rounded-full  ml-5">
+            <Link to="/login" className="btn bg-pink-400 rounded-md   ml-5">
               Login
             </Link>
             <Link to="/registration" className="btn btn-secondary ml-5  lg:text-center  hidden">

@@ -17,15 +17,15 @@ const PopularServicesCard = ({ service }) => {
       initial={{ opacity: 0, scale: 0 }}
       transition={{ duration: 2 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      className="flex flex-col space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-10"
+      className="flex flex-col space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-10 hover:border-1 duration-300 "
     >
       <img
         src={serviceImage}
         alt=""
-        className="object-cover w-full mb-4 h-30 sm:h-96 dark:bg-gray-500"
+        className="object-cover w-full mb-4 h-30 sm:h-56 dark:bg-gray-500"
       />
       <div className="p-6">
-        <div className="flex justify-between space-x-4">
+        <div className="flex justify-between items-center space-x-4 ">
           <div className="flex justify-center items-center gap-3">
             <img
               src={providerImage}
@@ -52,7 +52,7 @@ const PopularServicesCard = ({ service }) => {
         </p>
         <button>
           {" "}
-          <Link to={`allservices/${_id}`} className="btn bg-linear-to-l from-fuchsia-500 to-indigo-500 rounded-full ml-1 mt-3">
+          <Link to={`allservices/${_id}`} className="btn bg-pink-400 rounded-md rounded-full ml-1 mt-3">
             View Details
           </Link>
         </button>
