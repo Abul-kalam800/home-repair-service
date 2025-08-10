@@ -13,7 +13,7 @@ const MyservicesList = ({ servicesCreatedbyPromies }) => {
         <h1 className="text-3xl md:text-5xl font-semibold text-center mt-10 text-green-400">
         Mange service
       </h1>
-       <p className="mt-8 text-md md:text-lg text-center md:w-8/12 mx-auto ">
+       <p className="mt-8 text-md md:text-lg text-center md:w-8/12 mx-auto px-2 md:px-0 ">
         This section you can manage your service, What kind service you are
         provided. Yor cand update and deldet,and add new iteam,
       </p>

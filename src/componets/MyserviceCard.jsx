@@ -80,11 +80,11 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
       {/* Edit button  */}
       <div className="flex md:justify-end gap-6 flex-col mt-5">
         <Link to={`/update/${_id}`}>
-          <button className="btn bg-pink-400 rounded-md  w-full">EDIT</button>
+          <button className="btn bg-pink-300 rounded-md  w-full">EDIT</button>
         </Link>
         <button
           onClick={() => handleDelet(_id)}
-          className="btn bg-linear-to-t from-fuchsia-500 to-indigo-500 rounded-2xl w-full"
+          className="btn bg-red-300 rounded-2xl w-full"
         >
           DELET
         </button>
