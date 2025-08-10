@@ -13,7 +13,7 @@ export default function NewsletterSection() {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:3000/subscribe", {
+      const res = await axios.post("https://homerepairservices-server.vercel.app/subscribe", {
         email,
       });
       // give alert for succesfully subscribed
