@@ -46,13 +46,13 @@ const PopularServicesCard = ({ service }) => {
             <p className="font-bold ">Price: {price}</p>
           </div>
         </div>
-        <h2 className="my-4 text-xl font-semibold">{serviceName}</h2>
+        <h2 className="my-4 text-xl md:text-2xl font-semibold">{serviceName}</h2>
         <p className="text-sm dark:text-gray-600 pb-1">
           {longDescription.slice(0, 100)}...
         </p>
         <button>
           {" "}
-          <Link to={`allservices/${_id}`} className="btn bg-pink-400 rounded-md rounded-full ml-1 mt-3">
+          <Link to={`allservices/${_id}`} className="btn bg-pink-400 rounded-md  ml-1 mt-3">
             View Details
           </Link>
         </button>

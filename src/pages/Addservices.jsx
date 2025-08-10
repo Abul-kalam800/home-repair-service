@@ -39,12 +39,12 @@ const Addservices = () => {
   return (
    
      
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-2 md:px-0">
 
         <title>Add-services </title>
      
-      <h2 className="text-3xl md:text-5xl font-semibold text-center mt-10">Add Services</h2>
-      <p className="mt-8 text-lg text-center md:w-8/12 mx-auto">Add your Best service whice section you are expert, Our website just help you publish your skills and service. So Add service what you want so add that on.</p>
+      <h2 className="text-3xl md:text-5xl font-semibold text-center mt-10 text-green-400">Add Services</h2>
+      <p className="mt-8 text-md md:text-lg text-center md:w-8/12 mx-auto ">Add your Best service whice section you are expert, Our website just help you publish your skills and service. So Add service what you want so add that on.</p>
       <form onSubmit={handleAddservice} className="p-5 md:p-30">
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-5 ">
           <fieldset className="fieldset">

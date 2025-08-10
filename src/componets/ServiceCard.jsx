@@ -13,16 +13,16 @@ const ServiceCard = ({ service }) => {
     servicesLocation,
   } = service;
   return (
-    <div className="flex flex-col space-y-3 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 mb-5">
+    <div className="flex flex-col lg:flex-row  gap-7  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800 p-5">
       
-      <div className=" ">
+      <div className="w-full md:w-5/12 ">
         <img
           src={serviceImage}
           alt=""
-          className="object-cover w-full mb-4 h-40 sm:h-96 dark:bg-gray-500"
+          className="object-cover w-full mb-4 h-56 sm:h-56 dark:bg-gray-500"
         />
       </div>
-      <div className="p-6">
+      <div className="w-full lg:w-7/12 px-7 ">
         <div className="flex justify-between space-x-4">
           <div className="flex justify-center items-center gap-3">
             <img

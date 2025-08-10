@@ -14,10 +14,10 @@ const Allservices = () => {
   }, [search]);
 
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto px-5 md:px-0'>
             <title>All-services</title>
-            <h2 className='text-2xl md:text-5xl font-semibold md:text-center md:my-10 mt-10 text-center'>Our  All Services Avaiable </h2>
-            <p  className="mt-8 text-lg text-center md:w-8/12 mx-auto">Here Our all service is avaiable,Scroll and read our service and choose your perfect and match service Whice you want, You cand also serach for quic find.</p>
+            <h2 className="text-3xl md:text-5xl font-semibold text-center mt-10 text-green-400">Our  All Services Avaiable </h2>
+            <p className="mt-8 text-md md:text-lg text-center md:w-8/12 mx-auto ">Here Our all service is avaiable,Scroll and read our service and choose your perfect and match service Whice you want, You cand also serach for quic find.</p>
            <div className='grid gap-y-7'>
             <input type="text" name="search" id=""  placeholder='Search by name' className='input w-full my-10 p-6 rounded-4xl border-3 '  onChange={(e) => setSearch(e.target.value)}/>
              {

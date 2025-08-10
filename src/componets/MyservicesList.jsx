@@ -10,10 +10,10 @@ const MyservicesList = ({ servicesCreatedbyPromies }) => {
       {
         servicesCard.length == 0 ?  <h2 className="text-2xl text-center md:text-3xl text-warning font-semibold my-10">You are Not creat any service, Kindly creat service then come back!</h2>:
       <>
-        <h1 className="text-3xl md:text-5xl font-semibold text-center my-10">
+        <h1 className="text-3xl md:text-5xl font-semibold text-center mt-10 text-green-400">
         Mange service
       </h1>
-       <p className="mt-8 text-lg text-center md:w-8/12 mx-auto">
+       <p className="mt-8 text-md md:text-lg text-center md:w-8/12 mx-auto ">
         This section you can manage your service, What kind service you are
         provided. Yor cand update and deldet,and add new iteam,
       </p>
@@ -24,7 +24,7 @@ const MyservicesList = ({ servicesCreatedbyPromies }) => {
       }
      
      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
         {servicesCard?.map((service) => (
           <MyserviceCard
             key={service?._id}

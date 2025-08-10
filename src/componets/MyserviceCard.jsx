@@ -58,7 +58,7 @@ const MyserviceCard = ({ service, setServicesCard, servicesCard }) => {
         <img src={serviceImage} alt="" className=" rounded-2xl" />
       </div>
       <div className="pl-5">
-        <p className="text-4xl font-semibold  my-7">{serviceName}</p>
+        <p className="my-4 text-xl md:text-2xl font-semibold">{serviceName}</p>
         <img
           src={providerImage}
           alt="photo"

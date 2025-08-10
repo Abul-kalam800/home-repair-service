@@ -45,12 +45,12 @@ const MyserviceBookinCard = ({ myservice }) => {
   }
 
   return (
-    <div className="p-5 bg-base-200 rounded-2xl">
+    <div className="p-2 bg-base-200 rounded-2xl">
       <div>
         <img src={serviceImage} alt="" className="rounded-2xl" />
       </div>
       <div className=" grid space-y-2 bg-base-100 p-5">
-        <h3 className="text-3xl font-semibold my-5">{serviceName}</h3>
+        <h3 className="my-4 text-xl md:text-2xl font-semibold">{serviceName}</h3>
         <p>{currenUserEmail}</p>
         <p>{currentUserName}</p>
          <p>{date}</p>
