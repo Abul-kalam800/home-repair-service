@@ -5,6 +5,7 @@ import PopularService from '../componets/PopularService';
 import Upcoming from '../componets/Upcoming';
 import OurPartner from '../componets/OurPartner';
 import Review from '../componets/Review';
+import NewsletterSection from '../componets/NewsletterSection';
 
  
 const servicesPromies = fetch('https://homerepairservices-server.vercel.app/popular_services')
@@ -22,6 +23,7 @@ const Home = () => {
             <Upcoming></Upcoming>
             <OurPartner></OurPartner>
             <Review></Review>
+            <NewsletterSection></NewsletterSection>
         </div>
     );
 };

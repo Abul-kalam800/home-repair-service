@@ -12,7 +12,7 @@ const Upcoming = () => {
     
       className="mb-20"
     >
-      <h3 className="text-5xl text-center mt-20"> <motion.span 
+      <h3 className="text-3xl md:text-5xl font-semibold text-center my-20 "> <motion.span 
             animate={{
                 color:['#0f1be8','#f8cd0b','#0bf8df'], 
                  transition:{duration:3, repeat:Infinity}

@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 const Review = () => {
   return (
     <div className="my-40">
-      <h2 className="text-2xl lg:text-5xl text-center font-semibold my-30">
+      <h2 className="text-3xl md:text-5xl font-semibold text-center my-20 ">
         Our Client{" "}
         <motion.span
           animate={{

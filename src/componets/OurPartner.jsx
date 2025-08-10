@@ -17,7 +17,7 @@ const OurPartner = () => {
       whileInView={{ opacity: 1, translateX: 0, overflow:"hidden" }}
     
       className='mb-30'>
-            <h3 className='text-5xl text-center my-40'>Our <motion.span
+            <h3 className="text-3xl md:text-5xl font-semibold text-center my-20 ">Our <motion.span
             animate={{
                 color:['#0f1be8','#f8cd0b','#0bf8df'], 
                  transition:{duration:3, repeat:Infinity}

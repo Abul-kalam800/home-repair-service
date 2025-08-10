@@ -8,7 +8,7 @@ const PopularService = ({ servicesPromies }) => {
 
   return (
     <div>
-      <h2 className="text-5xl text-center  mt-20">
+      <h2 className="text-3xl md:text-5xl font-semibold text-center my-20 text-green-400 ">
        <motion.span
             animate={{
                 color:['#0f1be8','#f8cd0b','#0bf8df'], 
